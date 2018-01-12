@@ -93,7 +93,15 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */
 
+function mustBeTrue(boo){
+	if(boo === true){
+		return true;
+	}else{
+		return false;
+	}
+}
 
+console.log(mustBeTrue(true));
 
 /*
  * #5
@@ -106,6 +114,14 @@ console.log(isGreaterThan(4, 2));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
+
+function bigBird(word){
+	if(word.length === 3){
+		return "Word to Big Bird";
+	}
+}
+
+console.log(bigBird("dog"));
 
 
 
@@ -122,6 +138,15 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */
 
+function isEqual(first, second){
+	if(first === second){
+		return "You look mahvelous!";
+	}else{
+		return "I don't know who you are anymore.";
+	}
+}
+
+console.log(isEqual("ying", "yang"));
 
 /*
  * #7
@@ -136,6 +161,16 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */
 
+function notEqual(first, second){
+	if(first !== second){
+		return "Opposites do attract.";
+	}else{
+		return "Cause it's like you're my mirror";
+	}
+}
+
+console.log(notEqual("sweet", "sour"));
+
 
 /*
  * #8
@@ -148,6 +183,17 @@ console.log(isGreaterThan(4, 2));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
+
+
+function spareChange(money){
+	if(money > 100){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log("spareChange: ", spareChange(101));
 
 
 
@@ -165,6 +211,17 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */ 
 
+function dirty30(one, two, three){
+	var sum = one + two + three;
+	if(sum > 30){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log("dirty30: ", dirty30(10, 20, 25));
+
 
 
 /*
@@ -178,6 +235,16 @@ console.log(isGreaterThan(4, 2));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
+
+function evenStevens(num){
+	if(num%2 === 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+console.log("evenStevens: ", evenStevens(8));
 
 
 
@@ -195,6 +262,16 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */ 
 
+function daClub(cover, age){
+	if(cover >= 21 && age >= 21){
+		return "Welcome to the Legends Lounge.";
+	}else{
+		return "Chuck E Cheese is across the street.";
+	}
+}
+
+console.log("daClub: ", daClub(22, 21));
+
 
 /*
  * #12
@@ -208,6 +285,17 @@ console.log(isGreaterThan(4, 2));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
+
+function graduation(credits, thesis){
+	if(credits >= 120 || thesis === true){
+		return "Congratulations on a job well done.";
+	}else{
+		return "See you in summer school.";
+	}
+}
+
+var gradResults = graduation(100, true);
+console.log("graduation: ", gradResults);
 
 
 
@@ -223,6 +311,19 @@ console.log(isGreaterThan(4, 2));
  * Console.log your result.
 */ 
 
+function moneyTrain(speed){
+	if(speed < 50){
+		return "You are riding Honolulu's Rail.";
+	}else if(speed < 100){
+		return "You are riding an Amtrak.";
+	}else{
+		return "Now you ballin' in the Shinkansen!";
+	}
+}
+
+console.log(moneyTrain(99));
+
+
 
 /*
  * #14
@@ -237,6 +338,21 @@ console.log(isGreaterThan(4, 2));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+
+var budget = 100;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+
+function buyDoughnut(){
+	if(budget >= doughnutPrice){
+		budget -= doughnutPrice;
+		doughnutBought++;
+	}
+}
+
+buyDoughnut();
+console.log("budget ", budget);
+console.log("bought ", doughnutBought);
 
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
@@ -271,12 +387,20 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+for(var i = 1; i <= 5; i ++){
+	console.log("player ", i);
+}
+
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+
+  for(var i = 0; i < myFavFoods.length; i ++){
+  	console.log(myFavFoods[i]);
+  }
 
 
 /*
@@ -294,6 +418,18 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
+var numArray = [22, 33, 44, 55, 66];
+
+function sumItUp(arr){
+	var total = 0;
+	for(var i = 0; i < arr.length; i ++){
+		console.log(arr[i]);
+		total += arr[i];
+	}
+	return total;
+}
+
+console.log("sumItUp ", sumItUp(numArray));
 
 
 /*
@@ -309,6 +445,25 @@ for (var i = 0; i<toyotaModels.length; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+var east = [];
+var west = [];
+
+function allStars(ballers){
+	for(var i = 0; i < ballers.length; i ++){
+		console.log(ballers[i]);
+		if(i%2 === 0){
+			east.push(ballers[i]);
+		}else{
+			west.push(ballers[i]);
+		}
+		}
+}
+
+allStars(players);
+console.log("east: ", east);
+console.log("west: ", west);
+
 /*
  * #19
  * Function - subways
@@ -322,6 +477,20 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+
+  function subways(special){
+  	for(var i = 0; i < special.length; i ++){
+  		if(i%2 === 1){
+  			console.log(i);
+  			special.splice(i, 1, "Classic Tuna");
+  			special[i] = "Classic Tuna";
+  		}
+  	}
+  	return special;
+  }
+
+  subways(subOftheDay);
+  console.log(subOftheDay);
 
 
 /*
@@ -337,7 +506,19 @@ Final Boss
 */
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
- 
+
+function removeLetter(str){
+	var newArr = [];
+	for(var i = 0; i < str.length; i ++){
+		console.log(str[i]);
+		if(str[i] !== 'a' && str[i] !== "A"){
+			newArr.push(str[i]);
+		}
+	}
+	console.log(newArr);
+	return newArr;
+}
+removeLetter(phrase);
   
   
 
